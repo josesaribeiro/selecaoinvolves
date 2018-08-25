@@ -21,24 +21,32 @@ public class AlertaMongoGateway implements AlertaGateway{
 
 	@Override
 	public void salvar(Alerta alerta) {
+		
 		MongoDatabase database = mongoFactory.getDb();
 		MongoCollection<Document> collection = database.getCollection("Alertas");
+		
 		Document doc = new Document("ponto_de_venda", alerta.getPontoDeVenda())
                 .append("descricao", alerta.getDescricao())
                 .append("tipo", alerta.getFlTipo())
                 .append("margem", alerta.getMargem())
                 .append("produto", alerta.getProduto());
+		
 		collection.insertOne(doc);
 	}
 
 	@Override
 	public List<Alerta> buscarTodos() {
+		
 		MongoDatabase database = mongoFactory.getDb();
 		MongoCollection<Document> collection = database.getCollection("Alertas");
+		
 		FindIterable<Document> db = collection.find();
 		List<Alerta> alertas = new ArrayList<>();
+		
 		for (Document document : db) {
+			
 			Alerta alerta = new Alerta();
+			
 			alerta.setDescricao(document.getString("descricao"));
 			alerta.setFlTipo(document.getInteger("tipo"));
 			alerta.setMargem(document.getInteger("margem"));

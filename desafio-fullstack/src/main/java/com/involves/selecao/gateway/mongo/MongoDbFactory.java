@@ -16,8 +16,11 @@ public class MongoDbFactory {
 	}
 	
 	public MongoDatabase getDb(){
+		
 		String dataBaseName = "selecao";
+		
 		MongoDatabase database = client.getDatabase(dataBaseName);
+		
 		return database;
 	}
 }
