@@ -2,6 +2,12 @@
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+
 ### STS ###
 .apt_generated
 .classpath

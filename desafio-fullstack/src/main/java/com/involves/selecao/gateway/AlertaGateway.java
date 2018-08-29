@@ -2,7 +2,7 @@ package com.involves.selecao.gateway;
 
 import java.util.List;
 
-import com.involves.selecao.alerta.Alerta;
+import com.involves.selecao.models.Alerta;
 
 public interface AlertaGateway {
 	
