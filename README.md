@@ -7,7 +7,7 @@ Repositório dedicado a apresentação dos resultados da implementação propost
 
 ### Back End
 
-  1 - Fatoração do metodo proecessar
+  1 - Fatoração do metódo processar
 
 
 ### Front End
