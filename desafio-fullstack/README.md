@@ -19,5 +19,5 @@ Essas informações são salvas em um banco de dados para posterior análise.
 ``` 
 gradlew bootRun
 ```
-2. Abra o navegador em `http://localhost:8080/alertas/processar` 
+2. Abra o navegador em `http://localhost:8080/api/v1/alertas/processar` 
 para que o dados das lojas sejam processados. 
